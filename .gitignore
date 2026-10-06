@@ -1,0 +1,2 @@
+# Release packages are not committed - they go up as Release assets.
+*.zip
