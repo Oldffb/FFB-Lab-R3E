@@ -22,7 +22,7 @@ application carries everything it needs inside the executable.
 FFB-Lab-R3E-v1.7.0-win-x64\
   FFB Lab - R3E.exe       the application
   README.txt              where the scripts live and how to edit them safely
-  Custom FFB Scripts\     a copy of the calculation script (basic.ffb), for reference
+  Custom FFB Scripts\     copies of the calculation scripts (basic.ffb, default.ffb), for reference
 ```
 
 ## Requirements
@@ -60,7 +60,7 @@ your force feedback device, starting with Windows, and the VR overlay.
 
 | | |
 |---|---|
-| **Force feedback from a script** | Every calculation mode is a plain-text `.ffb` file. The default mode, *Basic*, passes the game's own force through and adds understeer, oversteer and ABS effects you can tune on screen. → [How it works](docs/how-it-works.md) |
+| **Force feedback from a script** | Every calculation mode is a plain-text `.ffb` file. The main mode, *Basic*, passes the game's own force through and adds understeer, oversteer and ABS effects you can tune on screen. The *Default* mode (`default.ffb`, in the package) blends the game's force with effects built from telemetry: self-aligning torque, lateral G, gyroscopic and weight transfer. → [How it works](docs/how-it-works.md) |
 | **Custom calculation scripts** | Copy the script, change it, and it appears as a new mode in the list. The language is small and safe by construction. → [Custom scripts](docs/custom-scripts.md) |
 | **Post-processing** | Linearity, rate limiter, low-pass filter and an 8-band equalizer, applied after the script. → [User guide](docs/user-guide.md) |
 | **Profiles per car and track** | Settings are saved per car and track and come back on their own the next time you drive that combination. → [User guide](docs/user-guide.md#profiles) |

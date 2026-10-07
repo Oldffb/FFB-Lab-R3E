@@ -24,8 +24,10 @@ The application reads its modes from:
 (paste that line into the Windows Explorer address bar). On the first start FFB Lab puts
 `basic.ffb` there. After that it never writes over it: your edits stay.
 
-The release zip also has a `Custom FFB Scripts\` folder next to the executable, with a copy of
-`basic.ffb`. **That copy is for reading only** — the application does not read that folder.
+The release zip also has a `Custom FFB Scripts\` folder next to the executable, with copies of
+`basic.ffb` and `default.ffb`. **Those copies are for reading only** — the application does not
+read that folder. To use the *Default* mode, copy `default.ffb` into the scripts folder above and
+restart FFB Lab (see [How it works](how-it-works.md#the-default-mode)).
 
 ## Making your own mode
 

@@ -43,6 +43,31 @@ These rows are not hard-coded: the script declares them, and the application dra
 A mode can also offer an **Output Type** bar that blends the native force with a force built
 from telemetry. Basic works only on the native force, so it does not show that bar.
 
+### The Default mode
+
+The package also brings **Default** (`default.ffb`, in `Custom FFB Scripts\`). It is not put in
+the scripts folder on its own: copy it to `%APPDATA%\FFB_Lab\R3E\scripts\` and restart FFB Lab,
+and it appears in the mode list. Basic stays the main mode.
+
+Default builds a force from the telemetry and blends it with the game's own force through the
+**Output Type** bar: *Nat 100 %* is the game's force only, *Tel 100 %* is the telemetry force
+only. Its effects, all **off** (0 %) to start with:
+
+- **Self-aligning torque** — the pull of the front tyres as they take cornering force; it goes
+  light as they reach their limit.
+- **Lateral G** — weight in the wheel that follows the cornering force.
+- **Gyroscopic** — the extra weight of the spinning front wheels in fast corners.
+- **Weight transfer** — resistance to turning the wheel while braking, with a light parking
+  effort when the car is (almost) stopped.
+- **Understeer** — lightens the telemetry force when the front tyres slide.
+- **Oversteer** — pushes in the direction of the slide when the rear lets go.
+- **ABS vibration** — a vibration while ABS is working.
+
+The ABS vibration and the understeer/oversteer vibrations are added at the very end, each with
+its own intensity: they are felt whatever the Output Type bar says. With every effect at 0 and
+the bar at *Nat 100 %*, the force is exactly the game's — a good starting point to bring the
+effects in one at a time.
+
 You can write your own modes — see [Custom scripts](custom-scripts.md).
 
 ## 3. Post-processing

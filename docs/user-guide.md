@@ -18,7 +18,8 @@ bottom), a top bar with the profile, car, track and the **Load / Save** buttons,
 - **FFB Calculation Mode** — the calculation script in use. Each `.ffb` file in the scripts
   folder is a mode (see [Custom scripts](custom-scripts.md)).
 - **Output Type** — shown only by modes that blend the game's native force with a force built
-  from telemetry. *Basic* does not use it.
+  from telemetry: *Nat 100 %* is the game's force only, *Tel 100 %* the telemetry force only.
+  *Basic* does not use it; *Default* does.
 
 **Effects** — one row per effect declared by the calculation mode. With *Basic*:
 
@@ -27,6 +28,14 @@ bottom), a top bar with the profile, car, track and the **Load / Save** buttons,
 | ABS vibration | Intensity · Frequency |
 | Understeer | Intensity (with a second cursor: the minimum level before the vibration starts) · Linearity · Frequency |
 | Oversteer | Same as Understeer |
+
+With *Default* (see [How it works](how-it-works.md#the-default-mode)):
+
+| Effect | Bars |
+|---|---|
+| Self-aligning torque · Lateral G · Gyroscopic · Weight transfer | Intensity |
+| Understeer · Oversteer | Intensity (with the minimum level before the vibration starts) · Frequency |
+| ABS vibration | Intensity · Frequency |
 
 The frequency can be **a single value** or **a range**; the button before the bar switches
 between them. With a range, the arrow button after the bar chooses whether the frequency rises
@@ -99,7 +108,7 @@ address bar):
 |---|---|
 | `perfis\global.json` | The Global profile and the settings. |
 | `perfis\carros\<car id>\<track>\` | Car profiles. |
-| `scripts\` | The calculation modes (`basic.ffb` and your own). |
+| `scripts\` | The calculation modes (`basic.ffb`, `default.ffb` once you copy it there, and your own). |
 | `constantes\` | Car constants and car names you can override — see [Constants](constants.md). |
 | `logs\ffblab-r3e.log` | The log. Useful for bug reports. |
 
