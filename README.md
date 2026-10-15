@@ -5,8 +5,7 @@
 FFB Lab - R3E reads RaceRoom's telemetry, calculates the steering force with a calculation script,
 and drives your wheel base directly. It is a single Windows program with its own window, an
 on-screen overlay that sits on top of the game, and an optional SteamVR overlay for VR drivers.
-
-![Main page](img/main.png)
+See [The interface](#the-interface).
 
 ---
 
@@ -19,7 +18,7 @@ Unzip it anywhere you like and run `FFB Lab - R3E.exe`. There is nothing to inst
 application carries everything it needs inside the executable.
 
 ```
-FFB-Lab-R3E-v1.7.0-win-x64\
+FFB-Lab-R3E-v1.8.0-win-x64\
   FFB Lab - R3E.exe       the application
   README.txt              where the scripts live and how to edit them safely
   Custom FFB Scripts\     copies of the calculation scripts (basic.ffb, default.ffb), for reference
@@ -66,9 +65,50 @@ your force feedback device, starting with Windows, and the VR overlay.
 | **Profiles per car and track** | Settings are saved per car and track and come back on their own the next time you drive that combination. → [User guide](docs/user-guide.md#profiles) |
 | **On-screen overlay** | A compact copy of the Main and Post-processing pages on top of the game, shown only while you are in a session. → [Overlays](docs/overlays.md) |
 | **SteamVR overlay** | The same panel inside your headset, operated with the controller laser. → [Overlays](docs/overlays.md#steamvr-overlay) |
+| **Logger** | Records the telemetry, every effect of the script and the outputs to a CSV file, 500 rows per second, from the main window or either overlay. → [User guide](docs/user-guide.md#main) |
 | **Car constants** | Per-car physical references (wheelbase, grip scales…) that scripts read. You can override them. → [Constants](docs/constants.md) |
 | **Wheel shortcuts** | Wheel buttons, hats or keys that step *Output FFB* (and *Output Type*) by ±1 % / ±10 % while driving. |
 | **5 languages** | English, Português (Brasil), Español, Français, Deutsch. |
+
+## The interface
+
+Every page shares the same frame: a menu on the left, a top bar with the **profile**, **car**,
+**track** and the **Load / Save** buttons, and a footer with the game state, the calculation
+mode, the wheel (green dot = acquired) and the version.
+
+### Main
+
+![Main page](img/main.png)
+
+- **Output** — *Output Type* (the game's force vs. the force built from telemetry),
+  *Output FFB* (master strength), *Invert FFB* and the *FFB Calculation Mode*.
+- **Effects** — one row per effect of the calculation mode: intensity, and for the vibrations a
+  frequency (single value or range, rising or falling with the effect). All start at 0 %.
+- **Logger** — records the telemetry, every effect and the outputs to a CSV file, and lets you
+  choose the folder.
+- *Effects* can be minimised with the button on its title.
+
+### Post-processing
+
+![Post-processing page](img/post-processing.png)
+
+- **Linearity**, **Slew**, **LP Hz** and **LP Q** — shape, rate limit and smooth the final force.
+- **Equalizer** — 8 bands from 1 to 240 Hz, ±20 dB, with an adjustable width (Q) per band,
+  grouped as *Weight & Grip*, *Kerbs & Big Bumps*, *Bumps & Surface* and *Road Texture*.
+- These values are global: they are not part of the car profiles.
+
+### Settings
+
+![Settings page](img/settings.png)
+
+- **FFB Device** — the wheel base to drive, and whether it was acquired.
+- **Startup** — start with Windows, start minimised.
+- **Overlays** — the on-screen overlay and the SteamVR overlay, each on or off.
+- **Device shortcuts** — wheel buttons, hats or keys for *Output Type* and *Output FFB*.
+- **General** — the language.
+
+More detail in the [User guide](docs/user-guide.md); the overlays are described in
+[Overlays](docs/overlays.md).
 
 ## Documentation
 

@@ -43,6 +43,25 @@ between them. With a range, the arrow button after the bar chooses whether the f
 
 All effects start at 0 % — off.
 
+**Logger** — records what happens on track to a CSV file, one row per force feedback tick
+(500 per second): the game telemetry, the signal of every effect in the calculation mode in use,
+and the outputs.
+
+- **Start / Pause** — one button. *Pause* closes the file; each *Start* makes a new one.
+  Starting needs a session; outside one, the button is disabled and the panel says why.
+- The dot is red while recording and grey otherwise; next to it, the row count and the file name.
+- **Choose folder** — where the files go. The folder is shown under the panel, and *Save* keeps
+  it in the Global profile. Default: `%APPDATA%\FFB_Lab\R3E\logger\`.
+- The effect columns come from the calculation mode: with another mode, the next recording has
+  that mode's effects.
+
+The Logger is the same in the main window and in both overlays: start it in one and the others
+show it recording.
+
+**Minimising panels:** *Effects* (Main) and *Equalizer* (Post-processing) have a − / + button on
+the right of their title. A minimised panel shows only its title; the choice is remembered at the
+next start. The overlays keep their own minimised panels.
+
 ## Post-processing
 
 ![Post-processing page](../img/post-processing.png)
@@ -110,6 +129,7 @@ address bar):
 | `perfis\carros\<car id>\<track>\` | Car profiles. |
 | `scripts\` | The calculation modes (`basic.ffb`, `default.ffb` once you copy it there, and your own). |
 | `constantes\` | Car constants and car names you can override — see [Constants](constants.md). |
+| `logger\` | The Logger's CSV files, unless you chose another folder. |
 | `logs\ffblab-r3e.log` | The log. Useful for bug reports. |
 
 Nothing is sent anywhere: all of it stays on your computer. Files you edited are never written

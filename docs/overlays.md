@@ -7,8 +7,11 @@ pages, so you can adjust the force without leaving the car:
 - the **SteamVR overlay**, the same panel inside your headset.
 
 The overlays and the main window all show the **same values**: what you change in one appears in
-the others at once. *Load* and *Save* work from the overlays too. The Settings page is only in the
-main window.
+the others at once. *Load* and *Save* work from the overlays too: after a successful *Save*, a
+small pop-up confirms it ("Car profile saved · <track> · time" or "Profile saved · time") and
+closes by itself after about 2.5 seconds, or with a click. It does not take the focus from the
+game and, in the headset, does not dim the panel. The **Logger** is in the overlays too (see the
+[User guide](user-guide.md#main)). The Settings page is only in the main window.
 
 Both are switched on and off in **Settings → Overlays**.
 
@@ -65,6 +68,10 @@ the game, so FFB Lab does not show it (the log says why).
 - Lists open as a choice inside the headset; text boxes (a profile name, for example) use the
   SteamVR keyboard.
 - **Moving the panel:** point at any place that is not a control, hold, and move the controller.
+- **Anchoring the panel:** the pin button at the bottom right of the panel. Anchored, pointing at
+  an empty area and holding no longer moves the panel; bars, equalizer, menu and buttons work as
+  usual, and the controller's scroll still brings it closer or pushes it away. Click the pin again
+  to release it.
 
 **The headset row** at the top of the panel:
 
@@ -76,4 +83,4 @@ the game, so FFB Lab does not show it (the log says why).
 | **Reset** | Puts the panel back in front of the headset, level. |
 
 The first time, the panel appears in front of the driver's head. The VR panel has its own transparency and minimised panels (the first time, it takes those of the
-on-screen overlay). Its position and curve are remembered (`vr-overlay.json` in the data folder).
+on-screen overlay). Its position, curve and anchor are remembered (`vr-overlay.json` in the data folder).
