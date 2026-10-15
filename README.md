@@ -1,3 +1,5 @@
+<p align="center"><img src="img/logo.png" alt="FFB Lab - R3E logo" width="220"></p>
+
 # FFB Lab - R3E
 
 **Custom force feedback for RaceRoom Racing Experience, calculated by a script you can read and change.**
