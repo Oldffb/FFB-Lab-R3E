@@ -56,9 +56,12 @@ the game, so FFB Lab does not show it (the log says why).
 
 **Turning it on:** *Settings → Overlays → Show VR overlay* (off by default).
 
-- FFB Lab **never starts SteamVR**. It waits for you to open it and then connects. If SteamVR
-  closes, FFB Lab lets go and waits again.
-- The panel shows when you are in the pit or on track, and hides in the menus.
+- FFB Lab **never starts SteamVR**. It connects only when SteamVR is already open **and**
+  RaceRoom is in VR with your car in the garage or on track — grid, formation and countdown
+  included.
+- The panel shows at those moments. In the menus, in pause and in replays it hides **and FFB
+  Lab disconnects from SteamVR**, sending it nothing: closing SteamVR after leaving the game
+  keeps it closed.
 - Turning the setting off disconnects from SteamVR immediately.
 
 **Using it with the controllers:**

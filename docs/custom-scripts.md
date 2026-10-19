@@ -189,7 +189,8 @@ every assignment; any failure while running gives force 0 and the application ke
 
 ## Game values (`sm.`)
 
-The values the script can read from RaceRoom (a few raw diagnostic fields are left out). Wheels: `FL` front left, `FR` front right,
+The values the script can read from RaceRoom: the ones in the table below, and **every field of
+RaceRoom's shared memory** by its name there. Wheels: `FL` front left, `FR` front right,
 `RL` rear left, `RR` rear right. Switches (on/off) read as 1 or 0.
 
 | Group | Names |
@@ -203,5 +204,6 @@ The values the script can read from RaceRoom (a few raw diagnostic fields are le
 | Pedals and aids | `ThrottlePedal`, `BrakePedal`, `BrakePedalRaw`, `BrakePressure`, `BrakePressFL/FR/RL/RR`, `BrakeBias`, `AbsActive`, `TcActive`, `TractionControlPct`, `TcSetting` |
 | Car | `EngineRpm`, `EngineTorque`, `CurrentGear`, `Downforce`, `TotalMass`, `FuelLeft`, `CarModelId` |
 | Session | `GameState`, `InPitlane`, `TrackId`, `LayoutId`, `SimTicks`, `PlayerSimTime` |
+| Shared memory | Every other field, untreated, with RaceRoom's own name — e.g. `GameUsingVr`, `SessionPhase`, `GameInMenus`, `GamePaused`, `Position`, `CompletedLaps`, `LapDistance`, `EngineTemp`, `BrakeTempFL_Current`, `DrsEngaged`, `PitLimiter`. A Logger file lists them all in its first row. Where a name is also in the rows above, the value is the one above. |
 
 `…` stands for the four wheels — e.g. `TireLoadFL`, `TireLoadFR`, `TireLoadRL`, `TireLoadRR`.

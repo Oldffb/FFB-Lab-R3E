@@ -44,8 +44,9 @@ between them. With a range, the arrow button after the bar chooses whether the f
 All effects start at 0 % — off.
 
 **Logger** — records what happens on track to a CSV file, one row per force feedback tick
-(500 per second): the game telemetry, the signal of every effect in the calculation mode in use,
-and the outputs.
+(500 per second): the game telemetry — every field of RaceRoom's shared memory, by its name —,
+the signal of every effect in the calculation mode in use, and the outputs. The first row holds
+the column names.
 
 - **Start / Pause** — one button. *Pause* closes the file; each *Start* makes a new one.
   Starting needs a session; outside one, the button is disabled and the panel says why.
