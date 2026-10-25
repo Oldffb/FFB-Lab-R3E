@@ -6,7 +6,8 @@
 
 FFB Lab - R3E reads RaceRoom's telemetry, calculates the steering force with a calculation script,
 and drives your wheel base directly. It is a single Windows program with its own window, an
-on-screen overlay that sits on top of the game, and an optional SteamVR overlay for VR drivers.
+on-screen overlay that sits on top of the game, and an optional VR overlay for VR drivers
+(SteamVR or OpenXR).
 
 ## The interface
 
@@ -41,7 +42,8 @@ mode, the wheel (green dot = acquired) and the version.
 
 - **FFB Device** — the wheel base to drive, and whether it was acquired.
 - **Startup** — start with Windows, start minimised.
-- **Overlays** — the on-screen overlay and the SteamVR overlay, each on or off.
+- **Overlays** — the on-screen overlay and the VR overlay, each on or off, and *Check CPU
+  Affinity*, a workaround for VR performance drops (off by default).
 - **Device shortcuts** — wheel buttons, hats or keys for *Output Type* and *Output FFB*.
 - **General** — the language.
 
@@ -59,10 +61,11 @@ Unzip it anywhere you like and run `FFB Lab - R3E.exe`. There is nothing to inst
 application carries everything it needs inside the executable.
 
 ```
-FFB-Lab-R3E-v1.9.0-win-x64\
+FFB-Lab-R3E-v1.9.2-win-x64\
   FFB Lab - R3E.exe       the application
   README.txt              where the scripts live and how to edit them safely
   Custom FFB Scripts\     copies of the calculation scripts (basic.ffb, default.ffb), for reference
+  OpenXR\                 the OpenXR layer for the VR overlay without SteamVR (keep it next to the exe)
 ```
 
 ## Requirements
@@ -70,7 +73,8 @@ FFB-Lab-R3E-v1.9.0-win-x64\
 - Windows 10 or 11, 64-bit.
 - RaceRoom Racing Experience.
 - A wheel base with force feedback that Windows sees as a game controller (DirectInput).
-- Optional: SteamVR and a headset, for the VR overlay.
+- Optional: a headset, for the VR overlay — RaceRoom in VR through SteamVR or through the
+  headset's own OpenXR runtime.
 
 ---
 
@@ -105,7 +109,7 @@ your force feedback device, starting with Windows, and the VR overlay.
 | **Post-processing** | Linearity, rate limiter, low-pass filter and an 8-band equalizer, applied after the script. → [User guide](docs/user-guide.md) |
 | **Profiles per car and track** | Settings are saved per car and track and come back on their own the next time you drive that combination. → [User guide](docs/user-guide.md#profiles) |
 | **On-screen overlay** | A compact copy of the Main and Post-processing pages on top of the game, shown only while you are in a session. → [Overlays](docs/overlays.md) |
-| **SteamVR overlay** | The same panel inside your headset, operated with the controller laser. → [Overlays](docs/overlays.md#steamvr-overlay) |
+| **VR overlay** | The same panel inside your headset, operated with the controller laser — through SteamVR or OpenXR, chosen by itself. → [Overlays](docs/overlays.md#steamvr-overlay) |
 | **Logger** | Records the telemetry, every effect of the script and the outputs to a CSV file, 500 rows per second, from the main window or either overlay. → [User guide](docs/user-guide.md#main) |
 | **Car constants** | Per-car physical references (wheelbase, grip scales…) that scripts read. You can override them. → [Constants](docs/constants.md) |
 | **Wheel shortcuts** | Wheel buttons, hats or keys that step *Output FFB* (and *Output Type*) by ±1 % / ±10 % while driving. |
@@ -116,7 +120,7 @@ your force feedback device, starting with Windows, and the VR overlay.
 - [How it works](docs/how-it-works.md) — the path from the game to your wheel.
 - [User guide](docs/user-guide.md) — the pages, profiles, shortcuts and where your files are.
 - [Custom scripts](docs/custom-scripts.md) — writing your own calculation mode, and what to watch out for.
-- [Overlays](docs/overlays.md) — the on-screen overlay and the SteamVR overlay.
+- [Overlays](docs/overlays.md) — the on-screen overlay, the VR overlay (SteamVR and OpenXR) and the CPU affinity workaround.
 - [Constants](docs/constants.md) — the per-car values scripts read, and how to override them.
 
 ---

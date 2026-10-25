@@ -12,7 +12,7 @@ This file satisfies the attribution requirement of those licences.
 
 | Component | Version | Used for | Licence |
 |---|---|---|---|
-| .NET Runtime and Windows Desktop (WPF) | 8.0 | the application itself | MIT |
+| .NET Runtime and Windows Desktop (WPF) | 8.0 | the application itself, and the OpenXR layer in `OpenXR\` (compiled ahead of time) | MIT |
 | SharpDX, SharpDX.DirectInput | 4.2.0 | driving the wheel (DirectInput force feedback) | MIT |
 | OVRSharp | 1.0.1 | SteamVR overlay | MIT |
 | OpenVR API (`openvr_api.dll`) | shipped with OVRSharp 1.0.1 | SteamVR overlay | BSD-3-Clause |

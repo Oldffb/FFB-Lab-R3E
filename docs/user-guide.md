@@ -82,7 +82,7 @@ These values are **global**: they are not part of the car profiles.
 |---|---|
 | **FFB Device** | The wheel base FFB Lab drives. Only devices with force feedback are listed. Next to the list: *Acquired*, or the reason it could not be. |
 | **Startup** | *Start with Windows* (opens when you sign in) and *Start minimized*. |
-| **Overlays** | *Show overlay in simulator* (on by default) and *Show VR overlay* (off by default). See [Overlays](overlays.md). |
+| **Overlays** | *Show overlay in simulator* (on by default), *Show VR overlay* (off by default) and *Check CPU Affinity*, a VR performance workaround (off by default). See [Overlays](overlays.md). |
 | **Device shortcuts** | Four steps (−10 %, −1 %, +1 %, +10 %) for *Output Type* and for *Output FFB*. Click a box and press a wheel button, a hat direction or a key; right-click a box to clear it. |
 | **General** | Language: English, Português (Brasil), Español, Français, Deutsch. |
 
