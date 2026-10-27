@@ -22,7 +22,8 @@ mode, the wheel (green dot = acquired) and the version.
 - **Output** — *Output Type* (the game's force vs. the force built from telemetry),
   *Output FFB* (master strength), *Invert FFB* and the *FFB Calculation Mode*.
 - **Effects** — one row per effect of the calculation mode: intensity, and for the vibrations a
-  frequency (single value or range, rising or falling with the effect). All start at 0 %.
+  frequency (single value or range, rising or falling with the effect). A car with no profile
+  of its own starts with a moderate preset (the values the script declares).
 - **Logger** — records the telemetry, every effect and the outputs to a CSV file, and lets you
   choose the folder.
 - *Effects* can be minimised with the button on its title.

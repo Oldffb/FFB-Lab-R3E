@@ -64,7 +64,8 @@ only. Its effects, all **off** (0 %) to start with:
 - **ABS vibration** — a vibration while ABS is working.
 
 The ABS vibration and the understeer/oversteer vibrations are added at the very end, each with
-its own intensity: they are felt whatever the Output Type bar says. With every effect at 0 and
+its own intensity: they are felt whatever the Output Type bar says. A car with no profile of its
+own starts with the moderate values the script declares. With every effect at 0 and
 the bar at *Nat 100 %*, the force is exactly the game's — a good starting point to bring the
 effects in one at a time.
 

@@ -41,7 +41,9 @@ The frequency can be **a single value** or **a range**; the button before the ba
 between them. With a range, the arrow button after the bar chooses whether the frequency rises
 (↗) or falls (↘) as the effect grows. A frequency of 0 Hz means no vibration.
 
-All effects start at 0 % — off.
+A car with no profile of its own starts with a moderate preset — in each mode, the values its
+script declares — and the global profile starts with *Output Type* at 50/50. Save a profile for
+the car and from then on it uses yours.
 
 **Logger** — records what happens on track to a CSV file, one row per force feedback tick
 (500 per second): the game telemetry — every field of RaceRoom's shared memory, by its name —,
