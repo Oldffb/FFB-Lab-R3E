@@ -136,12 +136,15 @@ Its position and curve are remembered in `vr-overlay.json`, apart from the Steam
 
 Some PCs show a drop in VR: RaceRoom stops holding the headset's frame rate (for example
 80–90 fps instead of a steady 90) with CPU and GPU far from their limits. Switching the game's
-CPU affinity to another set of cores and back fixes it until the next track load.
+CPU affinity to another set of cores and back fixes it until the game is paused or you go back to
+the garage.
 
-With this setting on and the game in VR, FFB Lab checks the game each time you go **from the
-menu to the pit lane** or **from the pit lane back to the menu**. If one of the game's threads is
-busy-waiting on a core, it switches the affinity; otherwise it does nothing. It never acts on
-track or during a race.
+With this setting on and the game in VR, FFB Lab switches the affinity **every time the car goes
+on track** — out of the pits, back from the pause or the menu, and at the race start — 2.5 seconds
+later. It also checks the game each time you go **from the menu to the pit lane** or **from the pit
+lane back to the menu**: if one of the game's threads is busy-waiting on a core, it switches the
+affinity; otherwise it does nothing. There are always at least 5 seconds between two switches.
+If you use a separate affinity script, turn it off so the two do not fight.
 
 It is a workaround: it is not guaranteed to help, and it has **only been tested on Intel
 CPUs**. Turn it on only if you have the problem; leave it off if VR runs fine.
