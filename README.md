@@ -147,4 +147,4 @@ manufacturer. All trademarks are the property of their respective owners.
 
 ## Community
 
-Questions, feedback and bug reports: [Discord](https://discord.gg/3UyyB8Aes).
+Questions, feedback and bug reports: [Discord](https://discord.gg/fHcAwqNbC5).
