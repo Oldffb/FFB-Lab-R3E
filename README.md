@@ -62,7 +62,7 @@ Unzip it anywhere you like and run `FFB Lab - R3E.exe`. There is nothing to inst
 application carries everything it needs inside the executable.
 
 ```
-FFB-Lab-R3E-v1.28.1-win-x64\
+FFB-Lab-R3E-v1.28.2-win-x64\
   FFB Lab - R3E.exe       the application
   README.txt              where the scripts live and how to edit them safely
   Custom FFB Scripts\     copies of the calculation scripts (basic, default, advanced_v2: the .ffb and its _composition.json), for reference
